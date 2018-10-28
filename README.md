@@ -7,9 +7,15 @@ This repository contains Powershell scripts that enable the user to do the follo
 * Edit fields of interest (i.e. Title and Minister's Name)
 
 ## Usage
-### Startup
+### Quick start (TL;DR)
+The easiest way to use this repository is as follows:
+
 * `git clone` or download/exract the ZIP archive of this repository.
 * [Start PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/starting-windows-powershell?view=powershell-6) and then [navigate](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-current-location?view=powershell-6) to the repository.
+* Run `./index.ps1` and follow the prompts.
+
+## More details
+The user may work directly with the core files by navigating to the `scripts` directory and doing the following:  
 
 ### Media search and store
 To find media files within a directory and its children, run the following line in the console
