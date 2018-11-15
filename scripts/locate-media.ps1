@@ -40,15 +40,15 @@ if (-not $(Test-Path $srchRoot)) {
 else { 
     Write-Output "Searching... "
 }
-
-$fileList = Get-ChildItem $srchRoot -Recurse -File
-$fileList = $fileList -match "\.(wav|mp3|mp4|wma|wmv|midi|m4a)$" 
+                                              # TODO: Complain about inability to use string variable
+$fileList = Get-ChildItem $srchRoot -Recurse -Include *.wav,*.mp3,*.mp4,*.wma,*.wmv,*.midi,*.m4a 
 if ($null -eq $fileList) {
-    Write-Error "No media files were discovered"
+    Write-Output "No media files were discovered`n"
+    exit
 }
 else {
     [int]$numFiles = $fileList.Count
-    Write-Output "Search completed.`n$numFiles files were found."
+    Write-Output "Search completed.`n$numFiles files were found.`n"
 }
 
 # Connect to database
